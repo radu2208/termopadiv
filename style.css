@@ -1,0 +1,398 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333; /* Culoarea de fundal a header-ului */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.banner {
+    display: flex; /* Folosește flexbox pentru a alinia elementele */
+    align-items: center; /* Centrează vertical conținutul */
+    padding: 5px 5px; /* Padding pe toate laturile */
+}
+
+.logo {
+    width: 90px; /* Ajustează lățimea logo-ului */
+    height: auto; /* Menține proporțiile */
+    margin-right: -100px; /* Spațiu între logo și navigare */
+}
+
+nav {
+    flex-grow: 1; /* Permite nav-ului să ocupe restul spațiului */
+}
+
+nav ul {
+    list-style: none; /* Elimină punctele de la listă */
+    padding: 0;
+    margin: 0; /* Elimină marginile */
+    text-align: right; /* Aliniază meniul la dreapta */
+}
+
+nav ul li {
+    display: inline; /* Afișează elementele pe aceeași linie */
+    margin: 0 15px; /* Spațiu între elementele de meniu */
+}
+
+nav ul li a {
+    color: white; /* Culoarea textului */
+    text-decoration: none; /* Elimină sublinierea */
+    font-weight: bold; /* Font îngroșat */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Schimbă culoarea la hover */
+}
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+/* Aplica imaginea de fundal doar pentru containerul selectat */
+.background-container {
+    background-image: url('logo-bun.jpg'); /* Imaginea de fundal */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Negru cu opacitate 50% */
+    z-index: 1; /* Se plasează deasupra imaginii, dar sub text */
+}
+/* Modificare scris descriere termopane */
+.text-highlight {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundal negru semitransparent */
+    color: white; /* Text alb pentru contrast */
+    padding: 20px; /* Spațiere în jurul textului */
+    border-radius: 10px; /* Colțuri rotunjite pentru un aspect modern */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adaugă o umbră ușoară pentru efect 3D */
+}
+.text-highlight h3, .text-highlight p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Umbra textului */
+}
+.text-highlight h3 {
+    font-weight: bold;
+}
+
+.text-highlight p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* Asigură-te că secțiunile arată bine */
+.background-container section {
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+    color: white; /* Ajustează culoarea textului pentru vizibilitate */
+}
+
+/* Stiluri pentru secțiunea "Serviciile noastre" care nu are imaginea de fundal */
+#servicii {
+    background-color: #f5f5f5; /* Fundal neutru pentru diferențiere */
+    padding: 40px 20px;
+    color: #333; /* Text închis pentru contrast */
+}
+
+
+
+/* Secțiuni */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#despre {
+    padding: 50px 20px; /* Adaugă padding */
+    background-color: #f9f9f9; /* Fundal deschis pentru contrast */
+    border-radius: 10px; /* Colțuri rotunjite */
+}
+
+#despre h2 {
+    font-size: 2.5rem; /* Dimensiune mare pentru titlu */
+    margin-bottom: 20px; /* Spațiu între titlu și text */
+}
+
+#despre p {
+    font-size: 1.2rem; /* Dimensiune text */
+    line-height: 1.6; /* Între linii pentru mai multă lizibilitate */
+    margin-bottom: 15px; /* Spațiu între paragrafe */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+            /* Sectiunea Despre Noi */
+#despre {
+    display: flex;
+    flex-wrap: wrap; /* Permite conținutului să se rearanjeze pe ecrane mici */
+    justify-content: center; /* Aliniază secțiunea la centru */
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fundal deschis pentru contrast */
+    border-radius: 15px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Umbre pentru efect de adâncime */
+    margin: 40px auto; /* Margin pentru separare de alte secțiuni */
+    max-width: 1200px; /* Limitează lățimea totală */
+}
+
+#despre .text {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333; /* Text mai închis pentru contrast */
+}
+
+#despre .text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Negru pentru titlu */
+}
+
+#despre .text p {
+    margin-bottom: 15px;
+}
+
+#despre .image {
+    flex: 1;
+    text-align: center; /* Centrează imaginea */
+}
+
+#despre .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Colțuri rotunjite pentru imagine */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbra imaginii */
+}
+
+/* Responsive pentru ecrane mici */
+@media (max-width: 768px) {
+    #despre {
+        flex-direction: column; /* Așează conținutul pe verticală pe ecrane mici */
+        text-align: center; /* Text centrat pe dispozitive mobile */
+    }
+
+    #despre .image {
+        margin-bottom: 20px; /* Spațiu sub imagine */
+    }
+}
+
+/* Produse */
+.produse {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.produs img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.produs img:hover {
+    transform: scale(1.05);
+}
+
+/* Servicii Section */
+#servicii {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Fundal deschis */
+}
+
+#servicii h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#servicii p {
+    font-size: 1.2rem;
+    margin-bottom: 40px; /* Spațiere mai mare sub paragraf */
+}
+
+/* Container pentru servicii */
+.servicii-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Spațiere între carduri */
+}
+
+/* Carduri servicii */
+.serviciu-card {
+    background-color: white; /* Fundal alb pentru carduri */
+    padding: 20px;
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbre subtile */
+    transition: transform 0.3s; /* Animatie pentru hover */
+}
+
+.serviciu-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.serviciu-card p {
+    font-size: 1rem;
+}
+
+/* Efect hover */
+.serviciu-card:hover {
+    transform: translateY(-5px); /* Ridică cardul la hover */
+}
+
+
+/* Buton CTA */
+.cta {
+    background-color: #25D366; /* Fundal gri */
+    color: white; /* Culoarea textului */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px; /* Colțuri rotunjite */
+    transition: background-color 0.3s ease;
+    display: inline-flex; /* Așezare flexibilă */
+    align-items: center; /* Centrează vertical imaginea și textul */
+}
+
+.cta:hover {
+    background-color: #bbb; /* Fundal mai închis la hover */
+}
+
+
+/* Formular Contact */
+.whatsapp-button {
+    display: inline-flex; /* Asigură-te că textul și imaginea sunt aliniate */
+    align-items: center; /* Centrează vertical imaginea și textul */
+    padding: 10px 15px; /* Adaugă un padding confortabil */
+    background-color: transparent; /* Fă fundalul transparent */
+    color: #25D366; /* Culoarea textului WhatsApp */
+    text-decoration: none; /* Elimină sublinierea */
+    border: 2px solid #25D366; /* Adaugă o margine verde WhatsApp */
+    border-radius: 5px; /* Colțuri rotunjite */
+    transition: background-color 0.3s, color 0.3s; /* Adaugă o tranziție pentru hover */
+}
+
+.whatsapp-button:hover {
+    background-color: #25D366; /* Fundal verde la hover */
+    color: white; /* Schimbă culoarea textului la alb */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.footer-col {
+    flex: 1;
+    margin: 10px;
+    
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    margin: 5px 0;
+}
+
+.footer-col a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.social-button img {
+    width: 40px; /* Dimensiune logo */
+    height: auto; /* Păstrează proporțiile */
+    transition: transform 0.3s ease;
+}
+
+.social-button img:hover {
+    transform: scale(1.1); /* Efect la hover */
+}
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0; /* Mai mult padding pentru un aspect mai aerisit */
+    background-color: #333; /* Fundal mai închis pentru a se potrivi cu header-ul */
+    color: #ccc; /* O nuanță mai deschisă de gri pentru text */
+    margin-top: 20px; /* Spațiu între cele două secțiuni */
+    border-top: 2px solid #444; /* Linie de delimitare superioară pentru a defini secțiunea */
+    font-size: 0.8rem; /* Dimensiune text mai mică pentru copyright */
+}
+
+.footer-bottom p {
+    margin: 0; /* Elimină marginile pentru a evita spațierea suplimentară */
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
